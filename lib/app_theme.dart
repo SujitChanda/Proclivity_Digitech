@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static Color _iconColor = Colors.green;
+  static const Color _iconColor = Color(0XFF0AA7BA);
 
   static const Color _lightPrimaryColor = Colors.white;
-  static const Color _lightPrimaryVarientColor = Colors.blue;
-  //static const Color _lightPrimaryVarientColor = Colors.white;
+  //static const Color _lightPrimaryVarientColor = Colors.green;
+  static const Color _lightPrimaryVarientColor = Color(0XFFF58345);
   
   //Color(0xFFCADCED);
-  static const Color _lightSecondaryColor = Colors.green;
+  static const Color _lightSecondaryColor = Color(0XFF0AA7BA);
   static const Color _lightOnPrimaryColor = Colors.black;
 
-  static const Color _darkPrimaryColor = Colors.white24;
+  static const Color _darkPrimaryColor = Color(0xFF4A4A58);
   static const Color _darkPrimaryVarientColor = Color(0xFF4A4A58);
   static const Color _darkSecondaryColor = Colors.green;
   static const Color _darkOnPrimaryColor = Colors.white;
@@ -23,7 +23,7 @@ class AppTheme {
     appBarTheme: AppBarTheme(
       color:  _lightPrimaryColor,
       elevation: 0,
-      iconTheme: IconThemeData(color: _lightOnPrimaryColor),
+     iconTheme: IconThemeData(color: _lightOnPrimaryColor),
     ),
     colorScheme: ColorScheme.light(
       primary: _lightPrimaryColor,
@@ -33,7 +33,7 @@ class AppTheme {
     ),
     iconTheme: IconThemeData(color: _iconColor, size: 30),
     textTheme: _lightTextTheme,
-    accentColor: Color(0XFF23b574).withOpacity(0.5)
+    accentColor: Color(0XFF0AA7BA).withOpacity(0.5)
     
   );
 
@@ -41,7 +41,7 @@ class AppTheme {
     scaffoldBackgroundColor: _darkPrimaryColor,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      color: _darkPrimaryVarientColor,
+      color: _darkOnPrimaryColor,
       iconTheme: IconThemeData(color: _darkOnPrimaryColor),
     ),
     colorScheme: ColorScheme.light(
@@ -55,32 +55,34 @@ class AppTheme {
     accentColor: Color(0XFF23b574).withOpacity(0.5)
   );
 
+ 
+
   static final TextTheme _lightTextTheme = TextTheme(
-    headline: _lightScreenHeadingTextStyle,
-    body1: _lightScreenTaskNameTextStyle,
-    body2: _lightScreenTaskDurationTextStyle,
+    headline6: _lightScreenHeadingTextStyle,
+    bodyText1: _lightScreenTaskNameTextStyle,
+    bodyText2: _lightScreenTaskDurationTextStyle,
     
   );
 
   static final TextTheme _darkTextTheme = TextTheme(
-    headline: _darkScreenHeadingTextStyle,
-    body1: _darkScreenTaskNameTextStyle,
-    body2: _darkScreenTaskDurationTextStyle,
+    headline6: _darkScreenHeadingTextStyle,
+    bodyText1: _darkScreenTaskNameTextStyle,
+    bodyText2: _darkScreenTaskDurationTextStyle,
   );
 
   static final TextStyle _lightScreenHeadingTextStyle =
-      TextStyle(fontFamily: 'MeriendaOne',fontSize: 30.0, color: _lightOnPrimaryColor,fontWeight: FontWeight.bold);
+      TextStyle(fontFamily: 'Archive',fontSize: 30.0, color: _lightOnPrimaryColor,fontWeight: FontWeight.normal);
   static final TextStyle _lightScreenTaskNameTextStyle =
-      TextStyle(fontFamily: 'StardosStencil',  fontSize: 18.0, color: _lightOnPrimaryColor,fontWeight: FontWeight.normal);
+      TextStyle(fontFamily: 'poppins',  fontSize: 18.0, color: _lightOnPrimaryColor,fontWeight: FontWeight.normal);
   static final TextStyle _lightScreenTaskDurationTextStyle =
-      TextStyle(fontFamily: 'Lusitana',fontSize: 14.0, color: Colors.black87,fontWeight: FontWeight.bold);
+      TextStyle(fontFamily: 'poppins',fontSize: 14.0, color: Colors.black87,fontWeight: FontWeight.bold);
 
   static final TextStyle _darkScreenHeadingTextStyle =
-      TextStyle(fontSize: 40.0, color: _darkOnPrimaryColor,fontWeight: FontWeight.w300);
+      TextStyle(fontFamily: 'Archive',fontSize: 30.0, color: _darkOnPrimaryColor,fontWeight: FontWeight.normal);
   static final TextStyle _darkScreenTaskNameTextStyle =
-      TextStyle(fontSize: 18.0, color: _darkOnPrimaryColor,fontWeight: FontWeight.w400);
+      TextStyle(fontFamily: 'poppins',fontSize: 18.0, color: _darkOnPrimaryColor,fontWeight: FontWeight.normal);
   static final TextStyle _darkScreenTaskDurationTextStyle =
-      TextStyle(fontSize: 14.0, color: Colors.white, fontWeight: FontWeight.w400);
+      TextStyle(fontFamily: 'poppins',fontSize: 14.0, color: Colors.white, fontWeight: FontWeight.bold);
 }
  
  List<BoxShadow> customShadow = [
